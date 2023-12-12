@@ -64,10 +64,10 @@
                                 <td>{{ $nomor++ }}</td>
                                 <td>{{ $normalisasiItem['kode_barang'] }}</td>
                                 <td>{{ $normalisasiItem['nama_barang'] }}</td>
-                                <td>{{ $normalisasiItem['roa'] }}</td>
-                                <td>{{ $normalisasiItem['gm'] }}</td>
-                                <td>{{ $normalisasiItem['ito'] }}</td>
-                                <td>{{ $normalisasiItem['re'] }}</td>
+                                <td>{{ number_format($normalisasiItem['roa'], 3) }}</td>
+                                <td>{{ number_format($normalisasiItem['gm'], 3) }}</td>
+                                <td>{{ number_format($normalisasiItem['ito'], 3) }}</td>
+                                <td>{{ number_format($normalisasiItem['re'], 3) }}</td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -105,10 +105,10 @@
                                 <td>{{ $nomor++ }}</td>
                                 <td>{{ $normalisasiItem['kode_barang'] }}</td>
                                 <td>{{ $normalisasiItem['nama_barang'] }}</td>
-                                <td>{{ $normalisasiItem['roa'] }}</td>
-                                <td>{{ $normalisasiItem['gm'] }}</td>
-                                <td>{{ $normalisasiItem['ito'] }}</td>
-                                <td>{{ $normalisasiItem['re'] }}</td>
+                                <td>{{ number_format($normalisasiItem['roa'], 3) }}</td>
+                                <td>{{ number_format($normalisasiItem['gm'], 3) }}</td>
+                                <td>{{ number_format($normalisasiItem['ito'], 3) }}</td>
+                                <td>{{ number_format($normalisasiItem['re'], 3) }}</td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -140,18 +140,18 @@
                             <tr>
                                 <td>1</td>
                                 <td>Solusi Ideal Positif</td>
-                                <td>{{ $idealPositif['roa'] }}</td>
-                                <td>{{ $idealPositif['gm'] }}</td>
-                                <td>{{ $idealPositif['ito'] }}</td>
-                                <td>{{ $idealPositif['re'] }}</td>
+                                <td>{{ number_format($idealPositif['roa'], 3) }}</td>
+                                <td>{{ number_format($idealPositif['gm'], 3) }}</td>
+                                <td>{{ number_format($idealPositif['ito'], 3) }}</td>
+                                <td>{{ number_format($idealPositif['re'], 3) }}</td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>Solusi Ideal Negatif</td>
-                                <td>{{ $idealNegatif['roa'] }}</td>
-                                <td>{{ $idealNegatif['gm'] }}</td>
-                                <td>{{ $idealNegatif['ito'] }}</td>
-                                <td>{{ $idealNegatif['re'] }}</td>
+                                <td>{{ number_format($idealNegatif['roa'], 3) }}</td>
+                                <td>{{ number_format($idealNegatif['gm'], 3) }}</td>
+                                <td>{{ number_format($idealNegatif['ito'], 3) }}</td>
+                                <td>{{ number_format($idealNegatif['re'], 3) }}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -173,8 +173,8 @@
                                 <th>#</th>
                                 <th>Kode Barang</th>
                                 <th>Nama Barang</th>
-                                <th>D+</th>
-                                <th>D-</th>
+                                <th>Nilai Kedekatan Positif</th>
+                                <th>Nilai Kedekatan Negatif</th>
                                 <th>Preferensi</th>
                             </tr>
                         </thead>
@@ -189,9 +189,9 @@
                                             <td>{{ $nomor++ }}</td>
                                             <td>{{ $item['kode_barang'] }}</td>
                                             <td>{{ $item['nama_barang'] }}</td>
-                                            <td>{{ $item['D+'] }}</td>
-                                            <td>{{ $item['D-'] }}</td>
-                                            <td>{{ $preferensiItem['V'] }}</td>
+                                            <td>{{ number_format($item['D+'], 3) }}</td>
+                                            <td>{{ number_format($item['D-'], 3) }}</td>
+                                            <td>{{ number_format($preferensiItem['V'], 3) }}</td>
                                         </tr>
                                     @endif
                                 @endforeach
@@ -221,7 +221,7 @@
                         <td>{{ $index + 1 }}</td>
                         <td>{{ $hasilItem['kode_barang'] }}</td>
                         <td>{{ $hasilItem['nama_barang'] }}</td>
-                        <td>{{ $hasilItem['V'] }}</td>
+                        <td>{{ number_format($hasilItem['V'], 3) }}</td>
                     </tr>
                     @endforeach
                 </tbody>
