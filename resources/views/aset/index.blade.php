@@ -7,9 +7,9 @@
     <div class="container">
         <a href="{{ route('asset.create') }}" class="btn btn-success mb-2">Tambah Aset</a>
 
-        <table class="table">
+        <table class="table table-striped text-center">
             <thead>
-                <tr>
+                <tr class="table-info">
                     <th>#</th>
                     <th>Nama</th>
                     <th>Nilai</th>

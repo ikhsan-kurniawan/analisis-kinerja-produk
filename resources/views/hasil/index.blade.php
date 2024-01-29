@@ -1,8 +1,8 @@
 <x-app-layout :title='$title' :header='$header'>
     <div class="container">
-        <table class="table">
+        <table class="table table-striped text-center">
             <thead>
-                <tr>
+                <tr class="table-info">
                     <th>#</th>
                     <th>ID Hasil</th>
                     <th>Periode</th>

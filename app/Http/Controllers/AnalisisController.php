@@ -62,6 +62,7 @@ class AnalisisController extends Controller
         $data = $data->map(function ($item) use ($total_aset) {
             $gm = ($item->total_laba / ($item->sub_harga * $item->total_qty)) * 100;
             $roa = ($item->total_laba / (($item->sub_harga_beli * $item->total_qty) + $total_aset)) * 100;
+            // $roa = ($item->total_laba / (($item->sub_harga_beli * $item->total_qty))) * 100;
             $re = ($item->total_qty * $item->sub_harga_beli) / ($item->total_qty * $item->sub_harga) * 100;
 
             return [
